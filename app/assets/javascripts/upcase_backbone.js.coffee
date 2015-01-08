@@ -3,7 +3,7 @@ window.UpcaseBackbone =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> alert 'Hello from Backbone!'
+  # initialize:
 
 window.App = window.UpcaseBackbone
 
