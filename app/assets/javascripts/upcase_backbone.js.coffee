@@ -5,8 +5,8 @@ window.UpcaseBackbone =
     Routers: {}
     initialize: ->
         @AllNotes = new @Collections.Notes(@notesJson)
-        new @Routers.UpcaseBackboneRouter
-        Backbone.history.start(pushState: true, hashChange: false)
+        view = new @Views.Notes(collection: @AllNotes)
+        $('#container').html(view.render().el)
 
 window.App = window.UpcaseBackbone
 
