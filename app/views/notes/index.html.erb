@@ -1,13 +1,3 @@
-<!-- <ul>
-    <% notes.each do |note| %>
-        <li>
-            <dl>
-                <dt> Title </dt>
-                <dd><%= link_to note.title, note %></dd>
-                <dt> Content </dt>
-                <dd><%= note.content %></dd>
-            </dl>
-        </li>
-    <% end %>
-</uL>
- -->
+<script>
+    UpcaseBackbone.notesJson = <%= raw notes.to_json %>;
+</script>

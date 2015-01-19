@@ -1,0 +1,6 @@
+<dl>
+    <dt> Title </dt>
+    <dd><a href="#" class='edit-note'><%= @notey.get('title') %></a></dd>
+    <dt> Content </dt>
+    <dd><%= @notey.get('content') %></dd>
+</dl>
