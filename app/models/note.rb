@@ -1,5 +1,6 @@
 class Note < ActiveRecord::Base
     validate :ensure_title_or_content
+    belongs_to :body, polymorphic: true
 
     private
         def ensure_title_or_content
