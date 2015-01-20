@@ -15,6 +15,7 @@
 //= require lodash
 //= require underscore
 //= require backbone
+//= require moment
 //= require upcase_backbone
 //= require_tree ../templates
 //= require_tree ./models
