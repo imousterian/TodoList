@@ -1,4 +1,4 @@
-class App.Models.Note extends Backbone.Model
+class App.Models.StickyNote extends Backbone.Model
     validate: ->
         unless @hasTitle() or @hasContent()
             {title: "Must provide a title or content"}
@@ -10,7 +10,7 @@ class App.Models.Note extends Backbone.Model
         @has(attr) && @get(attr).trim() != ""
 
     parse: (data) ->
-        data.content = data.body.sticky_note.content
+        data.content = data.body.sticky_note?.content || ""
         delete data.body
         data
 

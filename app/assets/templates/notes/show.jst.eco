@@ -2,7 +2,6 @@
     <input type="text" class="note-title" value="<%= @notey.get('title') %>" placeholder="Title..."/>
 </header>
 <div class="body">
-    <textarea class="note-content" placeholder="Content..."><%= @notey.get('content') %></textarea>
 </div>
 
 <div class="normal-footer"></div>
