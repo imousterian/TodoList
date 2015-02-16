@@ -18,9 +18,16 @@ class App.Views.TodoItem extends Backbone.View
         @model.set
             title: @$('.todo-item-title').val()
             complete: @$('.todo-item-complete').is(':checked')
-        @model.save()
+
+        if @model.hasTitle()
+            @model.save()
+        else
+            @model.destroy()
+            @remove()
         false
 
     renderComplete: ->
         @$('.todo-item-title').attr('disabled', @model.get("complete"))
-        @$('.todo-item-complete').attr('checked', @model.get("complete"))
+        @$('.todo-item-complete')
+            .attr('checked', @model.get("complete"))
+            .attr('disabled', @model.isNew())

@@ -5,6 +5,7 @@ class App.Models.TodoList extends Backbone.Model
 
     parse: (data) ->
         @todoItems.reset(data.body.todo_list.todo_items, parse: true)
+        data.todoListId = data.body.todo_list.id
         delete data.body
         data
 
